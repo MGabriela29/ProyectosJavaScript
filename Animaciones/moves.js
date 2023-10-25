@@ -10,8 +10,8 @@ function ghost(x, y){
     ctx.font =' 50px Serif';
     ctx.fillText ('🧟', x, y);
     humans.forEach(human => {
-        if(x + 10 > human.indexX && x + 10 < human.indexX + 20 ){
-            if(y - 10 > human.indexY -30 && y-10 < human.indexY){
+        if(x + 30 > human.indexX && x + 30 < human.indexX + 40 ){
+            if(y - 30 > human.indexY -40 && y-30 < human.indexY){
                 human.comido = true;
                 //alert("Se lo comió");
             }
