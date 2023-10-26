@@ -48,7 +48,7 @@ const comida = {
     },
     pinta: function(){
         ctx.font='25px Serif';
-        ctx.fillText('🐁',this.x * 20, this.y * 20);
+        ctx.fillText('🧠',this.x * 20, this.y * 20);
     }
 }
 let posIniX = 2;

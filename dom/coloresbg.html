@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores Background</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vw;
+            display: grid;
+            place-items: center;
+        }
+        .container {
+            width: 300px;
+            height: 250px;
+            border-radius: 10px;
+            background-color: beige;
+            text-align: center;
+        }
+
+        button{
+
+
+            width: 130px;
+              height: 40px;
+              color: #fff;
+              border-radius: 5px;
+              padding: 10px 25px;
+              font-family: 'Lato', sans-serif;
+              font-weight: 500;
+              background: transparent;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              position: relative;
+              display: inline-block;
+               box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+               7px 7px 20px 0px rgba(0,0,0,.1),
+               4px 4px 5px 0px rgba(0,0,0,.1);
+              outline: none;
+            }
+            
+            
+            .efect {
+                    background: #9b21fe;
+                    border: none;
+                    z-index: 1;
+                  }
+                  .efect:after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                    background-color: #663dff;
+                    border-radius: 5px;
+                     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                     7px 7px 20px 0px rgba(0,0,0,.1),
+                     4px 4px 5px 0px rgba(0,0,0,.1);
+                    transition: all 0.3s ease;
+                  }
+                  .efect:hover {
+                    color: #fff;
+                  }
+                  .efect:hover:after {
+                    left: 0;
+                    width: 100%;
+                  }
+                  .efect:active {
+                    top: 2px;
+                  }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Colores Background RGB</h1>
+        <h2></h2>
+        <button onclick="setColor()" class="efect"> Set Color</button>
+    </div>
+    <script src="./coloresbg.js"></script>
+</body>
+</html>

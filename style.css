@@ -1,0 +1,126 @@
+
+  
+  .cuadros {
+    --columnas: 200px 200px 200px 200px; /*declaro la variable que hará dos columnas de 200px para los items*/
+  }
+  
+  /* ----------Estilos----------  */
+
+  body {
+    margin: 0;
+    padding: 0;
+    
+
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+   h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  h3 {
+    text-align: left;
+    font-size: 25px;
+  }
+  
+  #navbar {
+    padding: 20px 90px;
+    font-size: 24px;
+    background-color: #663dff;
+  }
+  
+  #navbar > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0;
+   
+  }
+  
+  
+  /* css grid */
+  .cuadros {
+    display: grid;
+    grid-template-columns: var(--columnas);
+    grid-auto-rows: 140px;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-content: stretch;
+    padding: 90px;
+  }
+  
+  
+  .item {
+    --letColor: #000000 ; /*todo lo declarado como red (la propiedad Color) se actualiza*/
+    background: linear-gradient( rgb(0, 255, 179), rgb(0, 183, 255)); 
+     border-radius: 5px;
+  }
+  /*   se editaran los colores */
+  h1, h2, p {
+    color: var(--letColor);
+  /*   color: #ff6f69; */
+  }
+
+  #navbar a {
+    color: var(--nav--red);
+  }
+  
+  button {
+    /*   se editaran los colores 
+    background: var(--red);
+    color: var(--amarillo);*/
+   width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    align-items: center;
+
+  }
+  .efect {
+    background: #ff3dff ;
+    border: none;
+    z-index: 1;
+  }
+  .efect:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #4c00ff;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .efect:hover {
+    color: #fff;
+  }
+  .efect:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .efect:active {
+    top: 2px;
+  }
+  

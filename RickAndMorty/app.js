@@ -111,7 +111,8 @@ function getCard(e){
         modalBody.innerHTML='<i class="fa fa-spinner fa-pulse fa-3x"></i>';
         getCharacter(e.target.getAttribute('data-id'));
     }
-}
+} 
+getCharacters();
 
 document.querySelector('.pagination')
     .addEventListener('click', getButton);
